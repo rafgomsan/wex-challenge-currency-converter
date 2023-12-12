@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "3ede9c28-2a02-4171-99a0-815b34af257d",
+		"name": "Challengers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-purchase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"transactionDate\": \"2023-11-04\", \n    \"description\" : \"testtesttesttesttesttesttesttesttest\",\n    \"amount\": \"100\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/purchases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"purchases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-purchases",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"title\" : \"test\",\n   \"description\" : \"test\",\n   \"published\" : true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/purchases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"purchases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-all-purchases",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"title\" : \"test\",\n   \"description\" : \"test\",\n   \"published\" : true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/purchases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"purchases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-one-purchase",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"fromCurrency\" : \"Canada-Dollar\",\n   \"toCurrency\" : \"Brazil-Real\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/purchases/1503/Canada-Dollar/Brazil-Real",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"purchases",
+						"1503",
+						"Canada-Dollar",
+						"Brazil-Real"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
